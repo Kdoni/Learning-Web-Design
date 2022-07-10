@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Black Goose Bistro | Pizza-on-Demand</h1>
+    <p>Our 12" wood-fired pizzas are available for delivery. Build your custom
+        pizza and we'll deliver it within an hour.</p>
+    <form action="http://blackgoosebistro.com/pizza.php" method="POST">
+        <section id="Personal Information">
+            <em label="Information">Your information:</em><br>
+            <label><b>Name: <input type="text" name="customername"
+                        maxlength="20"></b>
+            </label><br>
+            <label><b>Address: <input type="address" name="address"
+                        maxlength="50"></b>
+            </label><br>
+            <label><b>Telephone Number: <input type="tel" name="telephone"
+                        maxlength="10"></b></label><br>
+            <label><b>Email: <input type="email" name="email"
+                        maxlength="50"></b>
+            </label><br>
+            <label><b>Delivery Instructions:<br> <textarea name="instructions"
+                        placeholder="No more than 400 characters long..."
+                        maxlength="400" rows="20"
+                        cols="40"></textarea></b></label>
+        </section>
+        <section id="Pizza Design">
+            <h3><em><b>Design your Dream Pizza:<br><small>Pizza
+                            specs</small></b></em></h3>
+            <p>Crust (Choose one): <input type="text" list="crust" name="crust">
+            </p>
+            <datalist id="crust">
+                <option value="Classic white"></option>
+                <option value="Multigrain"></option>
+                <option value="Cheese-stuffed crust"></option>
+                <option value="Gluten-free"></option>
+            </datalist>
+            <p>Toppings (Choose as many as you want): <input type="text"
+                    list="toppings[]" name="toppings"></p>
+            <datalist id="toppings[]">
+                <option value="[ ]Red sauce"></option>
+                <option value="[ ]White sauce"></option>
+                <option value="[ ]Mozzarella Cheese"></option>
+                <option value="[ ]Pepperoni"></option>
+                <option value="[ ]Mushrooms"></option>
+                <option value="[ ]Peppers"></option>
+                <option value="[ ]Anchovies"></option>
+            </datalist>
+            <p>Number<br>How many pizzas: <input type="number" size="1"
+                    list="number" name="number"></p>
+            <datalist id="number">
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5"></option>
+                <option value="6"></option>
+            </datalist>
+        </section>
+        <footer>
+            <input type="submit" name="OrderButton" value="Bring me a Pizza!">
+            <input type="reset" name="resetButton" value="Reset">
+        </footer>
+    </form>
+
+
+</body>
+
+</html>
