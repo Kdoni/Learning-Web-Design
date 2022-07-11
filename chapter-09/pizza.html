@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +20,7 @@
         pizza and we'll deliver it within an hour.</p>
     <form action="http://blackgoosebistro.com/pizza.php" method="POST">
         <section id="PersonalInformation">
-            <h3>"Information">Your information:</h3><br>
+            <h3>Your information:</h3><br>
             <label><b>Name: <input type="text" name="customername"
                         maxlength="20"></b>
             </label><br>
@@ -34,17 +40,44 @@
         <section id="PizzaDesign">
             <h3><em><b>Design your Dream Pizza:<br><small>Pizza
                             specs</small></b></em></h3>
-            <p>Crust (Choose one): <input type="text" list="crust" name="crust">
-            </p>
-            <datalist id="crust">
+            <p>Crust (Choose one): </p>
+            <!-- <input type="text" list="crust" name="crust"> -->
+            <ul>
+                <li><input type="radio" name="crust" value="classic">Classic
+                    White</li>
+                <li><input type="radio" name="crust"
+                        value="multigrain">Multigrain</li>
+                <li><input type="radio" name="crust"
+                        value="stuffed">Cheese-stuffed crust</li>
+                <li><input type="radio" name="crust" value="gluten">Gluten-free
+                </li>
+            </ul>
+            <!-- <datalist id="crust">
                 <option value="Classic white"></option>
                 <option value="Multigrain"></option>
                 <option value="Cheese-stuffed crust"></option>
                 <option value="Gluten-free"></option>
-            </datalist>
-            <p>Toppings (Choose as many as you want): <input type="text"
-                    list="toppings[]" name="toppings"></p>
-            <datalist id="toppings[]">
+            </datalist> -->
+            <p>Toppings (Choose as many as you want):</p>
+            <ul>
+                <li><input type="checkbox" name="toppings" value="red"
+                        checked>Red sauce</li>
+                <li><input type="checkbox" name="toppings" value="white">White
+                    sauce</li>
+                <li><input type="checkbox" name="toppings" value="mozzarella"
+                        checked>Mozzarella cheese</li>
+                <li><input type="checkbox" name="toppings"
+                        value="pepperoni">Pepperoni</li>
+                <li><input type="checkbox" name="toppings"
+                        value="mushrooms">Mushrooms</li>
+                <li><input type="checkbox" name="toppings"
+                        value="peppers">Peppers</li>
+                <li><input type="checkbox" name="toppings"
+                        value="anchovies">Anchovies</li>
+            </ul>
+            <!-- <input type="text"
+                    list="toppings[]" name="toppings"></p> -->
+            <!-- <datalist id="toppings[]">
                 <option value="[ ]Red sauce"></option>
                 <option value="[ ]White sauce"></option>
                 <option value="[ ]Mozzarella Cheese"></option>
@@ -52,7 +85,7 @@
                 <option value="[ ]Mushrooms"></option>
                 <option value="[ ]Peppers"></option>
                 <option value="[ ]Anchovies"></option>
-            </datalist>
+            </datalist> -->
             <p>Number<br>How many pizzas: <input type="text" size="1"
                     list="number" name="number"></p>
             <datalist id="number">
