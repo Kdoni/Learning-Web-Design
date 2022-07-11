@@ -13,12 +13,12 @@
     <p>Our 12" wood-fired pizzas are available for delivery. Build your custom
         pizza and we'll deliver it within an hour.</p>
     <form action="http://blackgoosebistro.com/pizza.php" method="POST">
-        <section id="Personal Information">
-            <em label="Information">Your information:</em><br>
+        <section id="PersonalInformation">
+            <h3>"Information">Your information:</h3><br>
             <label><b>Name: <input type="text" name="customername"
                         maxlength="20"></b>
             </label><br>
-            <label><b>Address: <input type="address" name="address"
+            <label><b>Address: <input type="text" name="address"
                         maxlength="50"></b>
             </label><br>
             <label><b>Telephone Number: <input type="tel" name="telephone"
@@ -31,7 +31,7 @@
                         maxlength="400" rows="20"
                         cols="40"></textarea></b></label>
         </section>
-        <section id="Pizza Design">
+        <section id="PizzaDesign">
             <h3><em><b>Design your Dream Pizza:<br><small>Pizza
                             specs</small></b></em></h3>
             <p>Crust (Choose one): <input type="text" list="crust" name="crust">
@@ -53,7 +53,7 @@
                 <option value="[ ]Peppers"></option>
                 <option value="[ ]Anchovies"></option>
             </datalist>
-            <p>Number<br>How many pizzas: <input type="number" size="1"
+            <p>Number<br>How many pizzas: <input type="text" size="1"
                     list="number" name="number"></p>
             <datalist id="number">
                 <option value="1"></option>
